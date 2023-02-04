@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+           function getComputerChoice(){
+            let variable = Math.floor(Math.random()*3)+1
+            if(variable==1){
+                return "rock"
+            }
+            if(variable==2){
+                return "paper"
+            }
+            if(variable==3){
+                return "scissor"
+            }
+        }
+        function whoWON(playerSelection,computerSelction){
+            playerSelection=playerSelection.toLowerCase()
+            if(playerSelection == computerSelction){
+               return console.log("EVEN")
+            }
+            if(playerSelection=="rock"){
+                if(computerSelction=="paper"){
+                   return console.log("Computer won !")
+                }
+                else{
+                    return console.log("YOU WON DEARIE")
+                }
+            }
+            if(playerSelection=="paper"){
+                if(computerSelction=="rock"){
+                    return console.log("YOU WON HAHA  HERE IS A COOKIE <3")
+
+                }
+                else{
+                    return console.log ("WELL Computer won !")
+                }
+            }
+            if(playerSelection=="scissor"){
+                if(computerSelction=="rock"){
+                    return console.log ("COMPUTER WON OH LALA")
+                }
+                else{
+                    return console.log("YOU WON YEEEAAAAAAH")
+                }
+            }
+
+            
+
+
+        }
+        let computerSelction = getComputerChoice()
+        let playerSelection = prompt("choose what you want")
+        whoWON(playerSelection,computerSelction)    
+
+
+           
+        </script>
+        
+     </body>
+</html>

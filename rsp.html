@@ -1,66 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        
+        <link rel="stylesheet" href="styles.css">
+        
     </head>
     <body>
-        <script>
-           function getComputerChoice(){
-            let variable = Math.floor(Math.random()*3)+1
-            if(variable==1){
-                return "rock"
-            }
-            if(variable==2){
-                return "paper"
-            }
-            if(variable==3){
-                return "scissor"
-            }
-        }
-        function whoWON(playerSelection,computerSelction){
-            playerSelection=playerSelection.toLowerCase()
-            if(playerSelection == computerSelction){
-               return console.log("EVEN")
-            }
-            if(playerSelection=="rock"){
-                if(computerSelction=="paper"){
-                   return console.log("Computer won !")
-                }
-                else{
-                    return console.log("YOU WON DEARIE")
-                }
-            }
-            if(playerSelection=="paper"){
-                if(computerSelction=="rock"){
-                    return console.log("YOU WON HAHA  HERE IS A COOKIE <3")
-
-                }
-                else{
-                    return console.log ("WELL Computer won !")
-                }
-            }
-            if(playerSelection=="scissor"){
-                if(computerSelction=="rock"){
-                    return console.log ("COMPUTER WON OH LALA")
-                }
-                else{
-                    return console.log("YOU WON YEEEAAAAAAH")
-                }
-            }
-
-            
-
-
-        }
-        let computerSelction = getComputerChoice()
-        let playerSelection = prompt("choose what you want")
-
-        console.log("the computer chose "+computerSelction)
-        whoWON(playerSelection,computerSelction)    
-
-
-           
-        </script>
+        <h1 style="text-align: center;"> ROCK PAPER SCISSOR </h1>
+        <div id="Result">PLAY</div>
+        <div class="but">
+        <button id="Rock">Rock</button>
+        <button id="scissor">Scissor</button>
+        <button id="paper">Paper</button>
+        </div>
+        <script src="rspjs.js"></script>
+    </body>
         
-     </body>
+        
+
 </html>
